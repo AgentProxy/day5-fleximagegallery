@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+
+.panels{
+    display:flex;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.panel1{
+    background-image: url("resources/images/7.jpg");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: none;
+}
+
+.panel2{
+    background-image: url("resources/images/2.jpg");
+    background-position: center;
+    background-size: 95% 100%;
+    background-repeat: none;
+    
+    /* Photo by Patrick Schöpflin on Unsplash */
+
+}
+
+
+.panel3{
+    background-image: url("resources/images/3.jpg");
+    background-position: center;
+    /* Photo by Jose Magana on Unsplash */
+}
+
+
+.panel4{
+    background-image: url("resources/images/1.jpg");
+    background-position: center;
+
+}
+
+
+.panel5{
+    background-image: url("resources/images/5.jpg");
+    background-position: bottom center;
+    /* Photo by Anthony Tyrrell on Unsplash */
+}
+
+
+.panel{
+    font-size: 20px;
+    flex: 1 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 
+        transform 0.5s ease-in,
+        font-size 0.7s ease-in,
+        flex 0.7s ease-in-out;
+}
+
+.panel > *{
+    margin: 0;
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    font-family: 'Arvo';
+    color: rgb(167, 37, 37);
+    font-weight: bold;
+
+}
+
+.panel > *:first-child{
+    transform: translateY(-100%);
+}
+
+.panel.open-active > *:first-child {
+    transform: translateY(0);
+}
+.panel > *:last-child{
+    transform: translateY(100%);
+}
+
+.panel.open-active > *:last-child {
+    transform: translateY(0);
+}
+
+.panel.open{
+    flex: 5;
+    font-size: 40px;
+}
